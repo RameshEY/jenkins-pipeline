@@ -11,7 +11,6 @@ node {
   stage('Create Docker Image') {
     dir('webapp') {
       sh 'sudo usermod -a -G docker $USER'
-      jenkins ALL=(ALL) NOPASSWD: ALL
       //docker.build("deepakpanda1/jenkins-pipeline:${env.BUILD_NUMBER}")
       docker.build("test")
     }
