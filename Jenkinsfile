@@ -11,7 +11,7 @@ node {
   stage('Create Docker Image') {
     dir('webapp') {
       //sh 'USER root'
-      sh 'sudo usermod -a -G docker root'
+      //sh 'sudo usermod -a -G docker root'
       //docker.build("deepakpanda1/jenkins-pipeline:${env.BUILD_NUMBER}")
     docker.build("test")
       
